@@ -1,0 +1,13 @@
+.catApp {
+    margin: 0 auto;
+    max-width: 900px;
+    .catFact {
+        float: left;
+        width: 300px;
+        height: 300px;
+        overflow: hidden;
+        img {
+            width: 100%;
+        }
+    }
+}
