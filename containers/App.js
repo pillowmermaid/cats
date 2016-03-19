@@ -7,12 +7,12 @@ import AddFact from './AddFact'
 const css = require('../styles/css/bundle.css');
 
 
-let App = ({dispatch}, state) => {
+let App = ({dispatch}) => {
     for (var i = 0; i < 9; i++){
         buildFact(dispatch)
     }
     return (
-        <div className = 'cat-app'>
+        <div className='cat-app'>
             <AddFact />
             <CatList />
         </div>

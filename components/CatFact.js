@@ -1,9 +1,15 @@
 import React from 'react'
 
-const CatFact = ({  id, text, imageURL, onClick}) => (
-    <div className='cat-fact' onClick={onClick}> 
-        <div className='fact-text'>{text}</div> <img src={imageURL}/>
-    </div>
+const bgGet = (imgURL) => {
+    return {backgroundImage: 'url('+imgURL+')'}
+}
+
+const CatFact = ({  text, imageURL, onClick}) => (
+        <div className='cat-fact' onClick={onClick} style={bgGet(imageURL)}> 
+            <div className="fact-text-container">
+                <div className='fact-text'>{text}</div>
+            </div>
+        </div>
 )
 
 export default CatFact

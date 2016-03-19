@@ -5,9 +5,9 @@ import { buildFact } from '../helpers/FactHelpers'
 let AddFact = ({ dispatch }) => {
   return (
     <div>
-        <div onClick={() => buildFact(dispatch)}>
+        <button className="btn" onClick={() => buildFact(dispatch)}>
           Add a cat
-        </div>
+        </button>
     </div>
   )
 }

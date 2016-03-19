@@ -30,7 +30,6 @@ const catFacts = (state = [], action) => {
                 catFact(i, action)
             )
         case 'REMOVE_FACT':
-            console.log('Removing', action)
             let findMe = {id:action.id, text:action.text, imageURL:action.image }
             let index = state.findIndex(x => JSON.stringify(x)===JSON.stringify(findMe))
             return [

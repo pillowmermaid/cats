@@ -3,11 +3,11 @@ import CatFact from './CatFact'
 
 const CatFacts = ({ catFacts, onRemoveFact }) => (
     
-    <div>
+    <div className="cat-facts">
         {catFacts.map(catFact => 
             <CatFact 
                 key={catFact.id} 
-                {...catFact} 
+                {...catFact}
                 onClick={() => onRemoveFact(catFact)}
             />
         )}
