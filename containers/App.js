@@ -4,7 +4,7 @@ import { buildFact } from '../helpers/FactHelpers'
 import CatList from './CatList'
 import AddFact from './AddFact'
 
-const css = require('../styles/css/bundle.css');
+import '../styles/css/bundle.css'
 
 
 let App = ({dispatch}) => {
@@ -12,7 +12,7 @@ let App = ({dispatch}) => {
         buildFact(dispatch)
     }
     return (
-        <div className='cat-app'>
+        <div className='catApp'>
             <AddFact />
             <CatList />
         </div>
