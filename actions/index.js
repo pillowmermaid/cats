@@ -1,4 +1,5 @@
-let nextFactId = 0; 
+let nextFactId = 0,
+    nextImageId= 0;
 export const addFact = (text) => {
     return {
         type: 'ADD_FACT',
@@ -6,10 +7,18 @@ export const addFact = (text) => {
         text
     }
 }
-export const addImage = (id, imgURL) => {
+export const addImage = (imgURL) => {
     return {
         type: 'ADD_IMAGE',
-        id,
+        id: nextImageId++,
         imgURL
+    }
+}
+export const removeFact = (id, text, image) => {
+    return {
+        type: 'REMOVE_FACT',
+        id,
+        text,
+        image
     }
 }

@@ -29,10 +29,17 @@ const catFacts = (state = [], action) => {
             return state.map(i =>
                 catFact(i, action)
             )
+        case 'REMOVE_FACT':
+            console.log('Removing', action)
+            let findMe = {id:action.id, text:action.text, imageURL:action.image }
+            let index = state.findIndex(x => JSON.stringify(x)===JSON.stringify(findMe))
+            return [
+                ...state.slice(0, index),
+                ...state.slice(index + 1)
+            ]
         default: 
             return state
     }
 }
-
 
 export default catFacts

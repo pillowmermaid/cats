@@ -1,11 +1,14 @@
-.catApp {
+.cat-app {
     margin: 0 auto;
     max-width: 900px;
-    .catFact {
+    .cat-fact {
         float: left;
         width: 300px;
         height: 300px;
         overflow: hidden;
+        .fact-text {
+            
+        }
         img {
             width: 100%;
         }
