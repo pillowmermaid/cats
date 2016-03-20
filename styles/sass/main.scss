@@ -12,6 +12,8 @@ body {
         background-color: whitesmoke;
         border-radius: 20px;
         position: fixed;
+        bottom: 10px;
+        right: 10px;
         cursor: pointer;
         &:hover {
             background-color: darken(whitesmoke,10);
@@ -22,18 +24,25 @@ body {
         }
     }
     .cat-facts {
-        max-width: 900px;
+        max-width: 904px;
         margin: 0 auto;
         padding: 5px;
         display: flex;
         flex-flow: row wrap;
         align-items: center;
         border-radius: 7pt;
+        @media screen and (max-width: 1024px) {
+            max-width: 604px;
+        }
+        @media screen and (max-width: 650px) {
+            max-width: 300px;
+        }
         .cat-fact {
             cursor: pointer;
             width: 300px;
             height: 300px;
             background-size: cover;
+            margin: 0.5px;
             &:hover {
                 .fact-text-container {
                     background-color: rgba(black, .5);
@@ -41,6 +50,12 @@ body {
                         display: inline-flex;
                     }
                 }
+            }
+            @media screen and (max-width: 1024px) {
+                margin: 0.5px;
+            }
+            @media screen and (max-width: 650px) {
+                margin-bottom: 1px;
             }
             .fact-text-container {
                 height: 100%;
