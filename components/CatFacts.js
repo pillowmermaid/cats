@@ -3,7 +3,7 @@ import CatFact from './CatFact'
 
 const CatFacts = ({ catFacts, onRemoveFact }) => (
     
-    <div className="cat-facts">
+    <div className='cat-facts'>
         {catFacts.map(catFact => 
             <CatFact 
                 key={catFact.id} 

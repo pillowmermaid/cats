@@ -58,15 +58,18 @@ body {
                 margin-bottom: 1px;
             }
             .fact-text-container {
+                box-sizing: border-box;
                 height: 100%;
                 width: 100%;
+                overflow: auto;
+                padding: 5px;
                 .fact-text {
                     display: none;
                     position: relative;
                     margin: 10px 0 0 10px;
                     color: white;
                     font-weight: 600;
-                    font-size: 20px;
+                    font-size: 18px;
                 }
             }
         }

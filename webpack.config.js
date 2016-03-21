@@ -18,6 +18,11 @@ module.exports = {
     ],
     loaders: [
       {
+        test: /\.json$/,
+        loader: 'json-loader',
+        include: __dirname
+      },
+      {
         test: /\.css$/,
         loader: 'style-loader!css-loader'
       },
@@ -32,6 +37,12 @@ module.exports = {
   output: {
     path: path.join(__dirname, 'dist'),
     filename: 'bundle.js'
+  },
+  node: {
+    console: true,
+    fs: 'empty',
+    net: 'empty',
+    tls: 'empty'
   },
   plugins: [
       new webpack.optimize.OccurenceOrderPlugin(),
