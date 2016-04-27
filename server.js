@@ -24,10 +24,8 @@ app.get(factProxy, function(req,res) {
     })
 });
 
-app.listen(port, ip, 511, function(error) {
+app.listen(process.env.PORT || port, ip, 511, function(error) {
   if (error) {
     console.error(error)
-  } else {
-    console.info("Listening on port %s. Open up %s:%s/ in your browser.", port, ip, port)
   }
 })
