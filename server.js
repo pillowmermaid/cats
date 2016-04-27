@@ -6,7 +6,7 @@ var request = require('request');
 
 var app = new (require('express'))()
 var port = 8000
-var factURL = 'http://catfacts-api.appspot.com/api/facts?number=1'
+var factURL = 'https://catfacts-api.appspot.com/api/facts?number=1'
 var factProxy = '/catfacts'
 
 var compiler = webpack(config)
