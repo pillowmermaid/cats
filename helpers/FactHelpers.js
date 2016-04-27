@@ -1,11 +1,10 @@
 import { addImage, addFact } from '../actions'
 
-const factProxy = '/catfacts'
-const imgURL = 'https://thecatapi.com/api/images/get?formal=xml&results_per_page=10'
+const imgURL = 'https://thecatapi.com/api/images/get?formal=xml&results_per_page=1'
 const backupIMG = 'https://c4.staticflickr.com/8/7172/6508022985_b22200ced0_z.jpg'
 
 export const buildFact = (dispatch) => {
-    fetchText(factProxy, dispatch)
+    fetchText('/catfacts', dispatch)
     fetchImage(imgURL, dispatch)
 }
 
