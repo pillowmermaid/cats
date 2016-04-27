@@ -5,7 +5,6 @@ var config = require('./webpack.config')
 var request = require('request');
 
 var app = new (require('express'))()
-var ip = 'localhost'
 var port = 8000
 var factURL = 'http://catfacts-api.appspot.com/api/facts?number=1'
 var factProxy = '/catfacts'
@@ -24,7 +23,7 @@ app.get(factProxy, function(req,res) {
     })
 });
 
-app.listen(process.env.PORT || port, ip, 511, function(error) {
+app.listen(process.env.PORT || port, function(error) {
   if (error) {
     console.error(error)
   }
