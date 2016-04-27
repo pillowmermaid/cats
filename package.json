@@ -6,6 +6,9 @@
     "start": "node server.js",
     "lint": "eslint . --ext .js --ext .js || true"
   },
+  "keywords": [
+    "heroku"
+  ],
   "author": "Amir Ashtiani",
   "license": "ISC",
   "dependencies": {
@@ -41,5 +44,8 @@
     "grunt": "^0.4.5",
     "grunt-contrib-sass": "^1.0.0",
     "grunt-contrib-watch": "^1.0.0"
+  },
+  "engines": {
+      "node":"5.11.0"
   }
 }
